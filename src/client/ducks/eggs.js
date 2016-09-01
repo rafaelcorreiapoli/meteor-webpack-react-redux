@@ -2,6 +2,7 @@ const INCREASE_EGG_WALK_COUNT = 'eggs/INCREASE_EGG_WALK_COUNT'
 const SELECT_EGG = 'eggs/SELECT_EGG'
 import { Map } from 'immutable'
 import { call } from 'client/ducks/methods'
+
 export const increaseEggWalkCount = (eggId, quantity) => (dispatch) => {
   dispatch(call('eggs.increaseEggWalkCount', {
     eggId,

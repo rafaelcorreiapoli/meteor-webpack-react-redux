@@ -34,7 +34,7 @@ export const call = (method, params) => (dispatch, getState, Meteor) => {
 }
 
 export const getMethodState = (state, method) => {
-  const map = state.ddp.methods.get(method)
+  const map = state.methods.get(method)
 
   return {
     loading: map && map.get('loading') || false,

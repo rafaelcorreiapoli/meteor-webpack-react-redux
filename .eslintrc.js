@@ -6,8 +6,8 @@ const config = {
   ],
   "globals": {}, // added programatically later
   "rules": {
-    "prefer-stateless-function": 0,
-    "import/no-unresolved": [0, { ignore: ['meteor/*'] }], // ignore meteor imports
+    "react/prefer-stateless-function": 0,
+    "import/no-unresolved": [2, { ignore: ['meteor/*'] }], // ignore meteor imports
     "no-unused-expressions": 0, // allows to do x && x();
     "no-underscore-dangle": 0, // allows x._bla
     "one-var": 0, // allow const x = 1, y = 2;
@@ -18,6 +18,13 @@ const config = {
     "global-require": 0,
     "no-param-reassign": 1, // allow to change input parameters
     "semi": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["src", "node_modules"]
+      }
+    }
   },
   "parserOptions":{
     "ecmaFeatures": {

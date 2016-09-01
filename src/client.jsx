@@ -6,6 +6,7 @@ import 'lib/methods'
 
 Meteor.startup(() => {
   Package['msavin:mongol'].Mongol.showCollection('eggs')
+  Package['msavin:mongol'].Mongol.showCollection('pokemons')
 
   ReactDOM.render(
     <Root />,

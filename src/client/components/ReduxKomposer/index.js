@@ -5,8 +5,6 @@ import { composeWithTracker } from 'react-komposer';
 export default
   (composer, mapStateToProps, mapDispatchToProps) =>
     ComposedComponent =>
-      composeWithTracker(composer)(
-        connect(mapStateToProps, mapDispatchToProps)(
-          ComposedComponent
-        )
+      connect(mapStateToProps, mapDispatchToProps)(
+        composeWithTracker(composer)(ComposedComponent)
       )

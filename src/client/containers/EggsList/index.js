@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { composeWithTracker } from 'react-komposer';
 import EggsList from 'client/components/EggsList'
 import Eggs from 'lib/collections/eggs'
+import { increaseEggWalkCount } from 'client/ducks/eggs'
 
 
 const composer = (props, onData) => {
-  console.log(Eggs.find().fetch())
   if (Meteor.subscribe('eggs').ready()) {
     const eggs = Eggs.find().fetch()
     onData(null, {
@@ -14,4 +14,19 @@ const composer = (props, onData) => {
     })
   }
 }
-export default composeWithTracker(composer)(EggsList)
+
+const mapStateToProps = (state, ownProps) => ({
+  eggs: ownProps.eggs,
+})
+
+const mapDispatchToProps = dispatch => ({
+  increaseEggWalkCount(eggId) {
+    dispatch(increaseEggWalkCount(eggId, 1))
+  },
+})
+
+export default composeWithTracker(composer)(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps)(EggsList)
+  )

@@ -8,3 +8,6 @@
 - [ ] SSR
 - [ ] React-komposer
 - [ ] HMR
+- [ ] Immutable
+- [ ] Source Maps
+- [ ] Redux's Ducks

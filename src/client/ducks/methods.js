@@ -2,9 +2,8 @@ const START_METHOD_REQUEST = 'methods/START_METHOD_REQUEST'
 const METHOD_SUCCESS = 'methods/METHOD_SUCCESS'
 const METHOD_ERROR = 'methods/METHOD_ERROR'
 import { Map } from 'immutable'
-export const call = (method, params) => (dispatch, getState, Meteor) => {
-  console.log('calling')
-  return new Promise((resolve, reject) => {
+export const call = (method, params) => (dispatch, getState, Meteor) => (
+  new Promise((resolve, reject) => {
     dispatch({
       type: START_METHOD_REQUEST,
       payload: {
@@ -19,8 +18,7 @@ export const call = (method, params) => (dispatch, getState, Meteor) => {
             method,
           },
         })
-        resolve(res)
-        return;
+        return resolve(res)
       }
       dispatch({
         type: METHOD_ERROR,
@@ -28,10 +26,10 @@ export const call = (method, params) => (dispatch, getState, Meteor) => {
           method,
         },
       })
-      reject(err)
+      return reject(err)
     })
   })
-}
+)
 
 export const getMethodState = (state, method) => {
   const map = state.methods.get(method)

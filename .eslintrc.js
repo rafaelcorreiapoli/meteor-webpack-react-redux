@@ -7,7 +7,7 @@ const config = {
   "globals": {}, // added programatically later
   "rules": {
     "prefer-stateless-function": 0,
-    "import/no-unresolved": [2, { ignore: ['meteor/*'] }], // ignore meteor imports
+    "import/no-unresolved": [0, { ignore: ['meteor/*'] }], // ignore meteor imports
     "no-unused-expressions": 0, // allows to do x && x();
     "no-underscore-dangle": 0, // allows x._bla
     "one-var": 0, // allow const x = 1, y = 2;

@@ -1,10 +1,8 @@
 import { Meteor } from 'meteor/meteor'
-import { connect } from 'react-redux'
-import { composeWithTracker } from 'react-komposer';
 import EggsList from 'client/components/EggsList'
 import Eggs from 'lib/collections/eggs'
 import { increaseEggWalkCount } from 'client/ducks/eggs'
-
+import reduxKomposer from 'client/components/ReduxKomposer'
 
 const composer = (props, onData) => {
   if (Meteor.subscribe('eggs').ready()) {
@@ -17,6 +15,7 @@ const composer = (props, onData) => {
 
 const mapStateToProps = (state, ownProps) => ({
   eggs: ownProps.eggs,
+  selectedEgg: state.eggs.get('selectedEgg')
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -25,8 +24,4 @@ const mapDispatchToProps = dispatch => ({
   },
 })
 
-export default composeWithTracker(composer)(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps)(EggsList)
-  )
+export default reduxKomposer(composer, mapStateToProps, mapDispatchToProps)(EggsList)

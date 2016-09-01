@@ -7,6 +7,7 @@ class Welcome extends React.Component {
     return (
       <div>
         <Counter />
+        <EggsList />
       </div>
     )
   }

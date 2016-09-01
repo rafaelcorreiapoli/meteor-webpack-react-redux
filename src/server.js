@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 
-import './server/publications'
+import './server/eggs'
+
 Meteor.startup(() => {
-  console.log('hello from server')
+
 })

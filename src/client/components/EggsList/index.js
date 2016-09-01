@@ -11,7 +11,7 @@ class EggsList extends React.Component {
     return (
       <div>
         {
-          eggs && eggs.map(egg => <Egg {...egg} />)
+          eggs && eggs.map(egg => <Egg key={egg._id} {...egg} />)
         }
       </div>
     )

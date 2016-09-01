@@ -6,6 +6,7 @@ import Eggs from 'lib/collections/eggs'
 
 
 const composer = (props, onData) => {
+  console.log(Eggs.find().fetch())
   if (Meteor.subscribe('eggs').ready()) {
     const eggs = Eggs.find().fetch()
     onData(null, {

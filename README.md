@@ -1,13 +1,12 @@
-# meteor-webpack-redux
+# meteor-webpack-react-redux
 
-- [ ] Meteor server
-- [ ] Meteor client
-- [ ] Redux
-- [ ] React
-- [ ] React-Router
+- [x] Meteor server
+- [x] Meteor client
+- [x] Redux
+- [x] React
+- [x] React-Router
 - [ ] SSR
-- [ ] React-komposer
-- [ ] HMR
-- [ ] Immutable
-- [ ] Source Maps
-- [ ] Redux's Ducks
+- [x] React-komposer
+- [x] HMR
+- [x] Immutable
+- [x] Redux's Ducks

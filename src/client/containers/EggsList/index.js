@@ -15,7 +15,7 @@ const composer = (props, onData) => {
 
 const mapStateToProps = (state, ownProps) => ({
   eggs: ownProps.eggs,
-  selectedEgg: state.eggs.get('selectedEgg')
+  selectedEgg: sstate.eggs.get('selectedEgg'),
 })
 
 const mapDispatchToProps = dispatch => ({

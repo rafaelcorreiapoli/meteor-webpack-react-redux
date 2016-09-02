@@ -3,5 +3,19 @@
     "es2015",
     "stage-0",
     "react"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@collections": "lib/collections",
+        "@resources": "lib/resources",
+        "@ducks": "client/ducks",
+        "@components": "client/components",
+        "@containers": "client/containers",
+        "@helpers": "client/helpers",
+        "@selectors": "client/selectors"
+      }
+    }]
   ]
 }

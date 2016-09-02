@@ -1,15 +1,14 @@
 import React, { PropTypes } from 'react'
-import Counter from 'client/containers/Counter'
-import EggsList from 'client/containers/EggsList'
-import EggMethodListener from 'client/containers/EggMethodListener'
+import Counter from '@containers/Counter'
+import EggsList from '@containers/EggsList'
+import EggMethodListener from '@containers/EggMethodListener'
+import PokeMap from '@containers/PokeMapContainer'
 
 class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <Counter />
-        <EggsList />
-        <EggMethodListener />
+        <PokeMap />
       </div>
     )
   }

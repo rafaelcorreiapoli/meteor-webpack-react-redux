@@ -17,24 +17,39 @@ const config = {
     "jsx-a11y/img-has-alt": 0, // allow no alt attribute on images
     "global-require": 0,
     "no-param-reassign": 1, // allow to change input parameters
-    "semi": 0
+    "semi": 0,
+    "new-cap": ["error",
+    {"capIsNewExceptions": [
+      "CatchPokemon",
+      "TransferPokemon",
+      "Latitude",
+      "Longitude",
+      "Heartbeat",
+      "EncounterPokemon",
+      "GetFort",
+      "DropItem",
+      "GetInventory",
+      "EvolvePokemon",
+      "Map"
+    ]}
+  ]
+},
+"settings": {
+  "import/resolver": {
+    "babel-plugin-module-resolver": {}
+  }
+},
+"parserOptions":{
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true,
   },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "moduleDirectory": ["src", "node_modules"]
-      }
-    }
-  },
-  "parserOptions":{
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-    },
-  },
-  globals: {
-    Meteor: true,
-    FlowRouter: true,
-  },
+},
+globals: {
+  Meteor: true,
+  FlowRouter: true,
+},
 };
+
+
 
 module.exports = config;

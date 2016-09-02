@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { Meteor } from 'meteor/meteor'
 import EggsList from 'client/components/EggsList'
-import Eggs from 'lib/collections/eggs'
-import { increaseEggWalkCount } from 'client/ducks/eggs'
+import Eggs from '@collections/eggs'
+import { increaseEggWalkCount } from '@ducks/eggs'
 //  import reduxKomposer from 'client/components/ReduxKomposer'
 import { connect } from 'react-redux'
 import { composeWithTracker } from 'react-komposer';

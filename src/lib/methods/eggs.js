@@ -1,7 +1,6 @@
 import { check } from 'meteor/check'
 import Eggs from 'lib/collections/eggs'
 
-console.log('registering methods')
 Meteor.methods({
   'eggs.increaseEggWalkCount'({ eggId, quantity }) {
     check(eggId, String)

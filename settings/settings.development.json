@@ -1,0 +1,12 @@
+{
+  "services": {
+    "facebook": {
+      "appId": "1215728311791052",
+      "secret": "d603ebcbac1b7436ca9bff5cbc96bc50"
+    },
+    "linkedin": {
+      "clientId": "77y93pmahlez1c",
+      "secret": "pFbyqbY1z4S7dbxm"
+    }
+  }
+}
